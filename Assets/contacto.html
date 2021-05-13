@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/sidemenubar.js"></script>
+    <link rel="icon" href="images/favicon.png"/>
+    <link rel="stylesheet" href="css/contacto.css" type="text/css" />
+    <title>Contactar</title>
+</head>
+
+<body>
+    <div id="mySidemenu" class="sidemenu">
+        <a href="javascript:void(0)" class="close" id="burgerClose">&times;</a>
+        <div class="sm-wrapper" id="listaa">
+            <a class="linksMenu" href="../index.html">INICIO</a>
+            <a class="linksMenu" href="exposiciones.html">EXPOSICIONES</a>
+            <a class="linksMenu" href="galeria.html">GALERIA</a>
+            <a class="linksMenu" href="#contacto">CONTACTAR</a>
+        </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+        <div class="burger" id="burger">&#9776;</div>
+        <div class="portada">
+            <div id="slideshow">
+                <div>
+                    <a href="#contacto"><p class="cambialetra">Contáctanos</p></a>
+                </div>
+                <div>
+                    <a href="#contacto"><p class="cambialetra">Reserva tu visita</p></a>
+                </div>
+            </div>
+        </div>
+        <div id="contacto">
+            <h1>CONTACTE CON NOSOTROS</h1>
+            <div class="datosContacto">
+                <div class="itemInfo">
+                    <h3 class="tituloInfo">DIRECCIÓN</h3>
+                    <p>Abandoibarra Etorb., 2, 48009 Bilbo, Bizkaia, <br>ESPAÑA</p>
+                </div>
+                <div class="itemInfo">
+                    <h3 class="tituloInfo">E-MAIL</h3>
+                    <p>arteyciencia@museum.com</p>
+                </div>
+                <div class="itemInfo">
+                    <h3 class="tituloInfo">TELÉFONO</h3>
+                    <p>+34 958 13 19 00</p>
+                </div>
+            </div>
+        </div>
+        <div id="formulario">
+            <h1>NO DUDE EN RESERVAR</h1>
+            <form>
+                <div id="part1">
+                    <p>Nombre</p>
+                    <input type="text" name="name" class="data"/>
+                    <p>Apellidos</p>
+                    <input type="text" name="name" class="data"/>
+                    <p>Email</p>
+                    <input type="text" name="email" class="data"/>
+                    <p>Teléfono</p>
+                    <input type="text" name="name" class="data"/>
+                    <p>Número de personas</p>
+                    <select>
+                      <option value="unpar">1-2 personas</option>
+                      <option value="dospares">3-5 personas</option>
+                      <option value="muchas">Más de 5</option>
+                    </select>
+                    <p>Otros datos de interés</p>
+                    <textarea id="message" name="mensaje"></textarea>
+                </div>
+                <input type="submit" value="Enviar" id="send"/>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="leftfooter">
+                <div class="nav2">
+                    <p class="navinfo">Navegación</p>
+                    <ul>
+                        <li><a class="linksMenu" href="../index.html">Inicio</a></li>
+                        <li><a class="linksMenu" href="exposiciones.html">Exposiciones</a></li>
+                        <li><a class="linksMenu" href="galeria.html">Galería</a></li>
+                        <li><a class="linksMenu" href="#contacto">Contactar</a></li>
+                        <li><a class="linksMenu" href="#">Tienda del museo</a></li>
+                    </ul>
+                </div>
+                <div class="nav3">
+                    <p class="navinfo">Información</p>
+                    <ul>
+                        <li><a class="linksMenu" href="#">Foro del museo</a></li>
+                        <li><a class="linksMenu" href="#">Alrededores</a></li>
+                        <li><a class="linksMenu" href="#">Universidad de Granada</a></li>
+                        <li><a class="linksMenu" href="#">Transporte</a></li>
+                    </ul>
+                </div>
+                <div class="nav3">
+                    <p class="navinfo">Exposiciones más famosas</p>
+                    <ul>
+                        <li><a class="linksMenu" href="#">Arte digital</a></li>
+                        <li><a class="linksMenu" href="#">Anatomía humana</a></li>
+                        <li><a class="linksMenu" href="#">Electricidad alterna</a></li>
+                        <li><a class="linksMenu" href="#">Arte Conceptual</a></li>
+                        <li><a class="linksMenu" href="#">Fauna abisal</a></li>
+                        <li><a class="linksMenu" href="#">Gigantes prehistóricos</a></li>
+                    </ul>
+                </div>
+                <div class="flag">
+                    <p>Encuéntranos en el mapa</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.176826694936!2d-2.9362004845146954!3d43.26867117913631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4fdede6031b5%3A0x508893b7cdaf6dad!2sMuseo+Guggenheim+Bilbao!5e0!3m2!1ses!2ses!4v1546909001477"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1500, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        document.getElementById('burger').addEventListener('click', openSM);
+        document.getElementById('burgerClose').addEventListener('click', closeSM);
+    </script>
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+        setInterval(function() {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next().delay(1000)
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 3000);
+    </script>
+</body>
+
+</html>
